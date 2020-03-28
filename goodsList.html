@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>商品列表</title>
+    <link rel="icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/goodList.css" />
+	</head>
+
+	<body>
+		<div id="header"></div>
+		<div id="sousuo"></div>
+		<div class="navBar clearfix">
+			<div id="goodsClass" class="fl">全部商品分类</div>
+			<ul class="goodsList fl">
+				<li class="active">
+					<a class="navColor goIndex">首页</a>
+				</li>
+				<li class="active">
+					<a class="navColor" href="">自营超市</a>
+				</li>
+				<li>
+					<a href="#">1号团</a>
+				</li>
+				<li>
+					<a href="#">1号超市</a>
+				</li>
+				<li>
+					<a href="#">女装</a>
+				</li>
+				<li>
+					<a href="#">美妆</a>
+				</li>
+				<li>
+					<a href="#">1号海购</a>
+				</li>
+				<li>
+					<a href="#">团购</a>
+				</li>
+			</ul>
+			<div class="tip"><img src="image/public/phone.png" alt="" /></div>
+		</div>
+		<div class="contentArea">
+			<!--顶部-->
+			<div class="topArea clearfix">
+				<!--当前所在页面-->
+				<p class="currentPage"><span>所有团购</span>&gt;<span>包饰</span>&gt;<span>珠韵首饰</span></p>
+			</div>
+			<!--筛选设置-->
+			<div class="filtrate clearfix">
+				<ul class="filterItem clearfix">
+					<li>
+						<div class="ItemName fl">品牌：</div>
+						<ul class="contentList clearfix brandList" dataClass="品牌" dataNum="0">
+							<li>珠韵首饰/ZHUYUN JEWELLERY</li>
+							<li>施华洛世奇/Swarovski</li>
+							<li>海瞳</li>
+							<li>周大福/CHOW TAI FOOK</li>
+							<li>京润珍珠</li>
+							<li>佰色传情 /BRI.R</li>
+							<li>迈姿/Maizi</li>
+							<li>Ginasy Jewelry</li>
+							<li>心鑫圆</li>
+							<li>银斯妮/yin si ni silver</li>
+							<li>迈姿/Maizi</li>
+							<li> Ginasy Jewelry</li>
+							<li>蛟蓓</li>
+							<li>芭比/Barbie</li>
+							<li>珍福祥</li>
+							<li>珍福祥</li>
+						</ul>
+					</li>
+					<li>
+
+						<div class="ItemName fl">价格：</div>
+						<ul class="contentList clearfix priceList" dataClass="价格" dataNum="1">
+							<li>0-199</li>
+							<li>200-399K</li>
+							<li>400-599</li>
+							<li>600-899</li>
+							<li>900-1299</li>
+							<li>芭比/Barbie</li>
+							<li>1300-1399</li>
+							<li>1400以上</li>
+						</ul>
+					</li>
+					<li>
+						<div class="ItemName fl">珍珠颜色：</div>
+						<ul class="contentList clearfix colorList" dataClass="颜色" dataNum="2">
+							<li>混彩</li>
+							<li>黑色系</li>
+							<li>粉色系</li>
+							<li>白色系</li>
+							<li>金色系</li>
+							<li>紫色系</li>
+						</ul>
+					</li>
+					<li>
+
+						<div class="ItemName fl">珍珠分类：</div>
+						<ul class="contentList clearfix classList" dataClass="分类" dataNum="3">
+							<li>天然海水珍珠</li>
+							<li>养殖海水珍珠</li>
+							<li>养殖淡水珍珠</li>
+							<li>天然淡水珍珠</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!--筛选条件-->
+			<div class="filterInfo">
+				<!--<p>您已选择:<span ></span></p>-->
+				<div id="setInfo">
+					<div id="chooseTitle" class="fl">您已选择:</div>
+					<ul class="fl setList">
+						<li dataIndex="0"></li>
+						<li dataIndex="1"></li>
+						<li dataIndex="2"></li>
+						<li dataIndex="3"></li>
+					</ul>
+				</div>
+			</div>
+			<!--底部-->
+			<div class="bottomArea clearfix">
+				<!--底部左侧-->
+				<div class="bottomLeftArea fl">
+					<p id="userHistory"><i></i><span id="title">历史记录</span><span id="clear">清空</span></p>
+					<ul id="likeList">
+						<li>
+							<div class="likeGood">
+								<img src="image/public/his_1.jpg" class="likeImge" />
+								<div class="nameAll">Leysen莱绅通灵珠宝 钻戒女戒指 钻石戒指一克拉钻戒钻戒女戒指 钻石戒指一克拉钻戒钻戒女戒指 钻石戒指一克拉钻戒</div>
+							</div>
+							<p class="likePrice">￥3234</p>
+						</li>
+						<li>
+							<div class="likeGood">
+								<img src="image/public/his_1.jpg" class="likeImge" />
+								<div class="nameAll">Leysen莱绅通灵珠宝 钻戒女戒指 钻石戒指一克拉钻戒钻戒女戒指 钻石戒指一克拉钻戒钻戒女戒指 钻石戒指一克拉钻戒</div>
+							</div>
+							<p class="likePrice">￥3234</p>
+						</li>
+						<li>
+							<div class="likeGood">
+								<img src="image/public/his_1.jpg" class="likeImge" />
+								<div class="nameAll">珠宝珠宝珠宝珠宝宝珠宝珠宝宝珠宝珠宝宝珠宝珠宝宝珠宝珠宝宝珠宝珠宝</div>
+							</div>
+							<p class="likePrice">￥3234</p>
+						</li>
+					</ul>
+				</div>
+				<!--底部右侧-->
+				<div class="bottomRightArea fl">
+					<div id="setPage" class="clearfix">
+						<ul class="setPageLeft">
+							<li class="setpage_Active">默认</li>
+							<li><span class="pageNameDo">销量</span><span class="up"></span><span class="down"></span></li>
+							<li><span class="pageNameDo">价格</span><span class="up"></span><span class="down"></span></li>
+							<li>新品</li>
+						</ul>
+						<div class="setPageright">
+							共发现120件
+						</div>
+					</div>
+					<div id="goodsListArea" class="clearfix">
+						<ul class="goodsListUl clearfix">
+							<li>
+								<img src="image/public/p_big.jpg" />
+								<p class="price">￥1</p>
+								<p class="listItemName">海瞳7-8mm水滴形天然珍珠项链</p>
+								<p class="do clearfix"><span class="collection"dataCol="0">收藏</span><span class="addCar">加入购物车</span></p>
+							</li>
+							<li>
+								<img src="image/public/p_big1.jpg" />
+								<p class="price">￥2</p>
+								<p class="listItemName">施华洛世奇 ICONIC SWAN时尚黑天鹅锁骨链</p>
+								<p class="do clearfix"><span class="collection"dataCol="1">收藏</span><span class="addCar">加入购物车</span></p>
+							</li>
+							<li>
+								<img src="image/public/per_8.jpg" />
+								<p class="price">￥1</p>
+								<p class="listItemName">海瞳7-珠宝珠宝珠宝珠</p>
+								<p class="do clearfix"><span class="collection"dataCol="2">收藏</span><span class="addCar">加入购物车</span></p>
+							</li>
+
+						</ul>
+					</div>
+					<ul class="pages ">
+						<li class="pre">上一页</li>
+						<li class="pageCurrent">1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li class="next">下一页</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="footer"></div>
+
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<script src="layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/goodList.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

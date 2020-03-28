@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<link rel="stylesheet" href="css/login.css">
+
+	</head>
+
+	<body>
+		<div id="header"></div>
+
+		<div id="box">
+			<div id="tup">
+				<img src="./image/public/loadimg.jpg" alt="" id="youke">
+			</div>
+			<div id="zhuce">
+				<ul>
+					<li class="bt">
+						<h4 class="fudongzou touming">1号店用户登入</h4>
+						<a href="reg.html" class="fudongyou touming a">注册账号</a>
+					</li>
+					<li class="sr"><img src="./image/public/userHead.png" alt="" class="fudongzou"><input type="text" class="fudongyou inp" id="userName" placeholder="邮箱/手机号/用户名"></li>
+					<li class="sr"><img src="./image/public/lock.png" alt="" class="fudongzou"><input type="password" class="fudongyou inp" id="pass" placeholder="密码"></li>
+				</ul>
+				<ul class="sp">
+					<li class="fudongzou touming"><input type="checkbox" id="autoLogin">&nbsp;记住密码</li>
+					<li class="fudongyou touming">忘记密码？</li>
+				</ul>
+				<div id="dengru" style="cursor: pointer">
+					登入
+				</div>
+				<p class="touming zise">更多合作网站账号登入</p>
+				<div class="dsf">
+					<img src="./image/public/l_1.png" alt="">
+					<img src="./image/public/l_2.png" alt="">
+					<img src="./image/public/l_3.png" alt="">
+					<img src="./image/public/l_4.png" alt="">
+					<img src="./image/public/i_down.gif" class=" tub fudongyou" alt="">
+					<span class="zise touming fudongyou">跟多合作网站 </span>
+				</div>
+
+			</div>
+			<div id="dh">
+				<p class="zise">&nbsp;&nbsp;
+					<a href="#" class="zise">沪ICP备13044278号</a>&nbsp;| &nbsp;合字B1.B2-20130004 &nbsp;| &nbsp;
+					<a href="#" class="zise">营业执照</a>
+				</p>
+				<p class="zise">Copyright © 1号店网上超市 2007-2016，All Rights Reserved</p>
+			</div>
+		</div>
+		<input type="hidden" value="1" id="hide">
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+
+				$("#header").load("publicHeader.html");
+				//获取用户信息Cookie
+				var loginCookie = $.cookie("userCookie");
+				var userCookieArry = loginCookie == "null" || loginCookie == undefined ? [] : JSON.parse(loginCookie);
+				//获取已经登录过得用户cookie
+				var loginedUserCookie = $.cookie("loginedUser") == "null" || $.cookie("loginedUser") == undefined ? [] : JSON.parse($.cookie("loginedUser"));
+				console.log("注册过的用户", userCookieArry);
+				console.log("登陆过的用户", loginedUserCookie);
+				//记住密码
+				for(var i = 0; i < loginedUserCookie.length; i++) {
+					if(loginedUserCookie[i].save == true) {
+						$("#autoLogin").prop("checked", true);
+						$("#userName").val(loginedUserCookie[i].name);
+						$("#pass").val(loginedUserCookie[i].pass);
+					}
+				}
+
+				function getUrl(url) {
+					var reg_url = /^[^\?]+\?([\w\W]+)$/,
+						reg_para = /([^&=]+)=([\w\W]*?)(&|$|#)/g,
+						arr_url = reg_url.exec(url),
+						ret = {};
+					if(arr_url && arr_url[1]) {
+						var str_para = arr_url[1],
+							result;
+						while((result = reg_para.exec(str_para)) != null) {
+							ret[result[1]] = result[2];
+						}
+					}
+					return ret;
+				}
+				//注册成功实现自动登录
+				var urlObj = getUrl(window.location.href);
+				if(urlObj.name != undefined) {
+					$("#userName").val(urlObj.name);
+					$("#pass").val(urlObj.ps);
+					login();
+				}
+				//登录操作
+				$("#dengru").click(login);
+				//游客登录
+				$("#youke").click(function() {
+
+					layer.msg('您的身份为游客请尽快注册，即将进入首页', {
+						icon: 16,
+						time: 3000,
+						offset: "c"
+					});
+					setTimeout(function() {
+						window.open("index.html", "_self");
+					}, 4000);
+				})
+				//用户登录
+				function login() {
+					var userName = $("#userName").val();
+					var pass = $("#pass").val();
+					//判断是否输入
+					if(userName.length > 0 && pass.length > 0) {
+						var reg = /^1[34578][0-9]{9}/
+						var reg1 = /[a-zA-Z0-9]{1,10}@[a-zA-Z0-9]{1,5}\.[a-zA-Z0-9]{1,5}/
+						//判断用户名是否符合格式
+						if(reg.test(userName) || reg1.test(userName)) {
+							//判断是否存在注册信息列表
+							if(userCookieArry.length > 0) {
+								var canLogin = false,
+									hasUser = false;
+								for(var i = 0; i < userCookieArry.length; i++) {
+									//判断用户名是否存在
+									if(userCookieArry[i].name == userName) {
+										hasUser = true;
+										//判断密码是否正确
+										if(userCookieArry[i].pass == pass) {
+											canLogin = true;
+
+											var userLogin = {
+												"name": userName,
+												"pass": pass,
+												"save": null,
+												"loginNum": 1,
+												"current": 1
+											}
+											//判断是否选择自动登录
+											if($("#autoLogin").prop("checked")) {
+												userLogin.save = true;
+											} else {
+												userLogin.save = false;
+											}
+											//判断是否登录过
+											var logined = true;
+											//如果登录过得用户信息不为空
+											if(loginedUserCookie.length > 0) {
+												for(var i = 0; i < loginedUserCookie.length; i++) {
+													if(loginedUserCookie[i].name == userName) {
+														loginedUserCookie[i].loginNum = parseInt(loginedUserCookie[i].loginNum) + 1;
+														loginedUserCookie[i].save = userLogin.save;
+														loginedUserCookie[i].current = 1;
+														logined = false;
+													} else {
+														loginedUserCookie[i].save = false;
+														loginedUserCookie[i].current = 0;
+													}
+												}
+												//没有登录过
+												if(logined) {
+													loginedUserCookie.push(userLogin);
+												}
+												//登录过得信息为空
+											} else {
+												loginedUserCookie.push(userLogin);
+											}
+
+											$.cookie("loginedUser", JSON.stringify(loginedUserCookie), {
+												expires: 7
+											});
+											console.log($.cookie("loginedUser"));
+
+											layer.msg('登录成功，即将进入首页', {
+												icon: 16,
+												time: 3000,
+												offset: "c"
+											});
+											setTimeout(function() {
+												window.open("index.html", "_self");
+											}, 4000);
+
+										}
+									}
+								}
+								//循环结束
+
+								if(!hasUser) {
+									layer.msg('您尚未注册，请尽快进行注册', {
+										icon: 2,
+										time: 3000,
+										offset: "c"
+									});
+									return;
+								}
+
+								if(!canLogin) {
+									layer.msg('用户名或密码输入有误，请重新输入', {
+										icon: 2,
+										time: 3000,
+										offset: "c"
+									});
+									return;
+
+								}
+								//用户信息为空时提示
+							} else {
+								layer.msg('您尚未注册，请尽快进行注册', {
+									icon: 2,
+									time: 3000,
+									offset: "c"
+								});
+							}
+							//判断用户名不符合格式
+						} else {
+							layer.msg('用户名格式不正确，请重新输入', {
+								icon: 2,
+								time: 3000,
+								offset: "c"
+							});
+						}
+						//输入内容为空
+					} else {
+						layer.msg('请输入完整信息后再进行登录', {
+							icon: 2,
+							time: 3000,
+							offset: "c"
+						});
+					}
+				}
+
+			})
+		</script>
+
+	</body>
+
+</html>

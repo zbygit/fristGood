@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/details.css"/>
+	</head>
+
+	<body>
+		<div id="header"></div>
+		<div id="sousuo"></div>
+		<div class="navBar clearfix">
+			<div id="goodsClass" class="fl">全部商品分类</div>
+			<ul class="goodsList fl">
+				<li class="active">
+					<a class="navColor goIndex">首页</a>
+				</li>
+				<li class="active">
+					<a class="navColor" href="">自营超市</a>
+				</li>
+				<li>
+					<a href="#">1号团</a>
+				</li>
+				<li>
+					<a href="#">1号超市</a>
+				</li>
+				<li>
+					<a href="#">女装</a>
+				</li>
+				<li>
+					<a href="#">美妆</a>
+				</li>
+				<li>
+					<a href="#">1号海购</a>
+				</li>
+				<li>
+					<a href="#">团购</a>
+				</li>
+			</ul>
+			<div class="tip"><img src="image/public/phone.png" alt="" /></div>
+		</div>
+		
+		<div class="contentArea">
+			<!--顶部-->
+			<div class="topArea clearfix">
+				<p class="currentPage"><span>所有团购</span>&gt;<span>包饰</span>&gt;<span>珠韵首饰</span>&nbsp;<i class="goodsName">Leysen莱绅通灵珠宝 </i></p>
+				<!--商品展示图片-->
+				<div class="goodsImg">
+					<input type="hidden"value="" id="imgPath"/>
+					<img class="imgShow" src="image/public/p_big.jpg" />
+				</div>
+				<!--商品选购信息-->
+				<div class="goodsInfo">
+					<div class="leftInfo fl">
+						<!--商品名称-->
+						<div class="goodsNameArea">
+							<p id="det_name">珠韵首饰 冰韵 天然白色正圆S925银扣珍珠项链</p>
+							<p id="det_other">全国包邮 送妈妈，正圆级淡水珍珠，白色S925银链扣，使用方便，尊贵礼物。</p>
+						</div>
+						<!--价格-->
+						<div class="price">
+							<p id="goodsPriceArea">本店价格:<span id="price">￥1400</span></p>
+							<p id="goodsPriceArea">参考价:<span id="referPrice">￥3233</span></p>
+						</div>
+						<!--尺码-->
+						<div class=" chooseArea clearfix">
+							<span class="fl">尺码:</span>
+							<ul id="sizeList" class="fl">
+								<li>43cm
+									<img src="image/public/ch.png" />
+								</li>
+								<li class="choose">45cm
+									<img src="image/public/ch.png" />
+								</li>
+								<li>50cm
+									<img src="image/public/ch.png" />
+								</li>
+							</ul>
+						</div>
+						<!--颜色-->
+						<div class=" chooseArea clearfix">
+							<span class="fl">颜色选择:</span>
+							<ul id="colorList" class="fl">
+								<li>粉色
+									<img src="image/public/ch.png" />
+								</li>
+								<li class="choose">白色
+									<img src="image/public/ch.png" />
+								</li>
+								<li>红色
+									<img src="image/public/ch.png" />
+								</li>
+							</ul>
+						</div>
+						<!--分享-->
+						<div class="shareArea clearfix">
+							<span id="share">分享
+								<!--分享方式-->
+								<div class="shareWay">
+		                            <a href="#"><img src="image/public/sh_1.gif"></a>
+		                            <a href="#"><img src="image/public/sh_2.gif"></a>
+		                            <a href="#"><img src="image/public/sh_3.gif"></a>
+		                            <a href="#"><img src="image/public/sh_4.gif"></a>
+		                            <a href="#"><img src="image/public/sh_5.gif"></a>
+	                       		 </div>
+							</span>
+							<span id="focus">关注商品</span>
+						</div>
+						<!--购买数量及加入购物车-->
+						<div class="carArea clearfix">
+							<div id="chooseNum" class="fl">
+								<!--数量显示-->
+								<input type="text" id="num" value="1" class="fl" />
+								<!--操作-->
+								<div id="operation" class="fl">
+									<span id="up">+</span>
+									<span id="down">-</span>
+								</div>
+							</div>
+							<div id="car" class="fl"></div>
+						</div>
+					</div>
+					<div class="rightInfo fl">
+						<img src="image/public/sbrand.jpg" /> 进入品牌专区
+					</div>
+				</div>
+				<div class="littleIcon clearfix">
+					<div id="leftBtn" class="fl"></div>
+					<ul>
+						<li><img id="currentImg" class="smallIcon smallIconActive" src="image/public/ps1.jpg" /></li>
+						<li><img class="smallIcon" src="image/public/ps2.jpg" /></li>
+						<li><img class="smallIcon" src="image/public/ps3.jpg" /></li>
+						<li><img class="smallIcon" src="image/public/ps4.jpg" /></li>
+					</ul>
+					<div id="rightBtn" class="fr"></div>
+				</div>
+			</div>
+			<!--底部-->
+			<div class="bottomArea clearfix">
+				<!--底部左侧-->
+				<div class="bottomLeftArea fl">
+					<p id="userLike">猜你喜欢</p>
+					<ul id="likeList">
+						<li>
+							<div class="likeGood">
+								<img src="image/public/his_1.jpg" class="likeImge" />
+								<div class="nameAll">Leysen莱绅通灵珠宝 钻戒女戒指 钻石戒指一克拉钻戒钻戒女戒指 钻石戒指一克拉钻戒钻戒女戒指 钻石戒指一克拉钻戒</div>
+							</div>
+							<p class="likePrice">￥3234</p>
+						</li>
+						<li>
+							<div class="likeGood">
+								<img src="image/public/his_1.jpg" class="likeImge" />
+								<div class="nameAll">Leysen莱绅通灵珠宝 钻戒女戒指 钻石戒指一克拉钻戒钻戒女戒指 钻石戒指一克拉钻戒钻戒女戒指 钻石戒指一克拉钻戒</div>
+							</div>
+							<p class="likePrice">￥3234</p>
+						</li>
+						<li>
+							<div class="likeGood">
+								<img src="image/public/his_1.jpg" class="likeImge" />
+								<div class="nameAll">Leysen莱绅通灵珠宝 钻戒女戒指 钻石戒指一克拉钻戒钻戒女戒指 钻石戒指一克拉钻戒钻戒女戒指 钻石戒指一克拉钻戒</div>
+							</div>
+							<p class="likePrice">￥3234</p>
+						</li>
+					</ul>
+				</div>
+				<!--底部右侧-->
+				<div class="bottomRightArea fl">
+					<!--搭配-->
+					<div class="collocation clearfix">
+						<ul class="areaTitle">
+							<li class="areaActive">选择搭配</li>
+						</ul>
+						<ul class="goodsGroupArea">
+							<li><img class="goodItem" src="image/public/p_big.jpg" />
+								<p class="goodItemName">石戒指一克拉钻戒钻戒女戒指石戒指一克拉钻戒钻戒女戒指</p>
+								<p class="goodItemChoose">
+									<input type="checkbox" name="group" id="one" value="" />
+									<span class="goodItemprice">￥10</span>
+								</p>
+							</li>
+							<li><img class="sym" src="image/public/jia_b.gif" /></li>
+							<li><img class="goodItem" src="image/public/mat_1.jpg" />
+								<p class="goodItemName">石戒指一克拉钻戒钻戒女戒指石戒指一克拉钻戒钻戒女戒指</p>
+								<p class="goodItemChoose">
+									<input type="checkbox" name="group" id="two" value="" />
+									<span class="goodItemprice">￥20</span>
+								</p>
+							</li>
+							<li><img class="sym" src="image/public/jia_b.gif" /></li>
+							<li><img class="goodItem" src="image/public/mat_2.jpg" />
+								<p class="goodItemName">石戒指一克拉钻戒钻戒女戒指石戒指一克拉钻戒钻戒女戒指</p>
+								<p class="goodItemChoose">
+									<input type="checkbox" name="group" id="three" value="" />
+									<span class="goodItemprice">￥30</span>
+								</p>
+							</li>
+							<li><img class="sym" src="image/public/equl.gif" /></li>
+							<li>
+								<div id="total">
+									<p id="totalPrice">套餐价：￥<span id="priceAll">0</span></p>
+									<input type="text" name="totalGroup" id="totalGroup" value="1" />
+									<img src="image/public/z_buy.gif" id="pay" />
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!--信息-->
+					<div>
+						<ul class="areaTitle changeArea">
+							<li class="areaActive">商品属性</li>
+							<li>商品详情</li>
+							<li>商品评价</li>
+						</ul>
+						<div class="showContent clearfix">
+							<div class="goodsAttr clearfix">
+								<ul class="goodsAttrList clearfix">
+									<li>商品名称：天然淡水珍珠</li>
+									<li>商品编号：1546211</li>
+									<li>品牌： 珠韵首饰</li>
+									<li>上架时间：2015-09-06 09:19:09</li>
+									<li>商品毛重：160.00g</li>
+									<li>商品产地：法国</li>
+									<li>珍珠形状：正圆 </li>
+									<li>镶嵌材质：纯银 </li>
+									<li>款式：项链 </li>
+								</ul>
+							</div>
+							<div class="goodsinfoImg clearfix">
+								<img src="image/public/de2.jpg" />
+								<img src="image/public/de3.jpg" />
+								<img src="image/public/de4.jpg" />
+								<img src="image/public/de5.jpg" />
+								<img src="image/public/de6.jpg" />
+								<img src="image/public/de7.jpg" />
+								<img src="image/public/de8.jpg" />
+							</div>
+							<div class="comment clearfix">
+								<div class="commentInfo clearfix">
+									<div id="commentProgress" class="fl">
+										<!--好评度-->
+										<div id="deg">
+											<p id="bigNum">90%</p>
+											<p id="bigtext">好评度</p>
+										</div>
+										<ul id="progress">
+											<li><span class="proText">好评( <span class="comNum" id="good">1232</span> )</span>
+												<div class="proBox">
+													<div class="proCon"></div>
+												</div>
+											</li>
+											<li><span class="proText">中评( <span  class="comNum"id="center">742</span> )</span>
+												<div class="proBox">
+													<div class="proCon"></div>
+												</div>
+											</li>
+											<li><span class="proText">差评( <span  class="comNum" id="poor">392</span> )</span>
+												<div class="proBox">
+													<div class="proCon"></div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div id="commentTip1" class="fl otherArea">
+										购买过珠韵首饰 天然银扣珍珠项链的顾客，在收到商品才可以对该商品发表评论
+									</div>
+									<div id="commentTip2" class="fl otherArea">
+										<p>您可对已购买商品进行评价</p>
+										<span id="startWrite">我要评价</span>
+									</div>
+								</div>
+								<ul class="commentlist clearfix">
+									<li class="fl">
+										<div class="uesrInfo fl">
+											<p> <img src="image/public/peo1.jpg" class="userImg" /><span>你这的给定</span></p>
+										</div>
+										<div class="goodsBase fl">
+											<p>颜色分类:红色</p>
+											<p>型号:43cm</p>
+										</div>
+										<div class="commentText fl">
+											<p>产品很好，香味很喜欢，必须给赞。</p>
+											<p>2015-09-24</p>
+										</div>
+									</li>
+									<li class="fl">
+										<div class="uesrInfo fl">
+											<p> <img src="image/public/peo1.jpg" class="userImg" /><span>你这的给定</span></p>
+										</div>
+										<div class="goodsBase fl">
+											<p>颜色分类:红色</p>
+											<p>型号:43cm</p>
+										</div>
+										<div class="commentText fl">
+											<p>产品很好，香味很喜欢，必须给赞。</p>
+											<p>2015-09-24</p>
+										</div>
+									</li>
+									<li class="fl">
+										<div class="uesrInfo fl">
+											<p> <img src="image/public/peo1.jpg" class="userImg" /><span>你这的给定</span></p>
+											<p> (匿名用户)</p>
+										</div>
+										<div class="goodsBase fl">
+											<p>颜色分类:红色</p>
+											<p>型号:43cm</p>
+										</div>
+										<div class="commentText fl">
+											<p>产品很好，香味很喜欢，必须给赞。</p>
+											<p>2015-09-24</p>
+										</div>
+									</li>
+
+								</ul>
+								<ul class="pages ">
+									<li class="pre">上一页</li>
+									<li class="pageCurrent">1</li>
+									<li>2</li>
+									<li>3</li>
+									<li>4</li>
+									<li class="next">下一页</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="msgBox">
+			<form>
+				<h2>来 , 说说你在做什么 , 想什么</h2>
+
+				<div>
+					<input id="userName" class="f-text" value="" placeholder="用户名称" />
+					<p id="face">
+						<img src="image/public/face1.gif" class="current" />
+						<img src="image/public/face2.gif" />
+						<img src="image/public/face3.gif" />
+						<img src="image/public/face4.gif" />
+						<img src="image/public/face5.gif" />
+						<img src="image/public/face6.gif" />
+					</p>
+				</div>
+				<div><textarea id="conBox" class="f-text"></textarea></div>
+				<div class="tr">
+					<p>
+						<span id="sendBtn">发送</span>
+						<span id="closeBtn">取消</span>
+					</p>
+				</div>
+			</form>
+		</div>
+		<div id="footer"></div>
+
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="layer/layer.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/details.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+	</head>
+
+	<body>
+
+		<header>
+			<div class="fl citySet" >送货至:&nbsp;<span class="address">北京</span>
+				 <div class="set_city">
+                    	<p>请选择所在的收货地区</p>
+                        <table border="0" class="c_tab"  cellspacing="0" cellpadding="0">
+                          <tr>
+                            <th>A</th>
+                            <td class="c_h"><span>安徽</span><span>澳门</span></td>
+                          </tr>
+                          <tr>
+                            <th>B</th>
+                            <td class="c_h"><span>北京</span></td>
+                          </tr>
+                          <tr>
+                            <th>C</th>
+                            <td class="c_h"><span>重庆</span></td>
+                          </tr>
+                          <tr>
+                            <th>F</th>
+                            <td class="c_h"><span>福建</span></td>
+                          </tr>
+                          <tr>
+                            <th>G</th>
+                            <td class="c_h"><span>广东</span><span>广西</span><span>贵州</span><span>甘肃</span></td>
+                          </tr>
+                          <tr>
+                            <th>H</th>
+                            <td class="c_h"><span>河北</span><span>河南</span><span>黑龙江</span><span>海南</span><span>湖北</span><span>湖南</span></td>
+                          </tr>
+                          <tr>
+                            <th>J</th>
+                            <td class="c_h"><span>江苏</span><span>吉林</span><span>江西</span></td>
+                          </tr>
+                          <tr>
+                            <th>L</th>
+                            <td class="c_h"><span>辽宁</span></td>
+                          </tr>
+                          <tr>
+                            <th>N</th>
+                            <td class="c_h"><span>内蒙古</span><span>宁夏</span></td>
+                          </tr>
+                          <tr>
+                            <th>Q</th>
+                            <td class="c_h"><span>青海</span></td>
+                          </tr>
+                          <tr>
+                            <th>S</th>
+                            <td class="c_h"><span>上海</span><span>山东</span><span>山西</span><span>四川</span><span>陕西</span></td>
+                          </tr>
+                          <tr>
+                            <th>T</th>
+                            <td class="c_h"><span>台湾</span><span>天津</span></td>
+                          </tr>
+                          <tr>
+                            <th>X</th>
+                            <td class="c_h"><span>西藏</span><span>香港</span><span>新疆</span></td>
+                          </tr>
+                          <tr>
+                            <th>Y</th>
+                            <td class="c_h"><span>云南</span></td>
+                          </tr>
+                          <tr>
+                            <th>Z</th>
+                            <td class="c_h"><span>浙江</span></td>
+                          </tr>
+                        </table>
+                </div>
+			</div>
+			<ul class="fr top_nav">
+				<li class="orangeHover">你好!请
+					<a href="#" class="login">登录</a>
+				</li>
+				<li class="orange reg">
+					<a href="#">免费注册</a>
+				</li>
+				<li class="barHover">
+					<a href="#">我的订单</a>
+				</li>
+				<li class="barHover">
+					<a href="#">收藏夹</a>
+				</li>
+				<li class="barHover">
+					<a href="#">客户服务 <img class="topIcon" src="image/public/t_arrow.gif" /></a>
+				</li>
+				<li class="barHover">
+					<a href="#">网址导航</a>
+				</li>
+				<li>
+					<a href="#">关注我们
+						<img class="topIcon" src="image/public/sh1.png" />
+						<img class="topIcon" src="image/public/sh2.png" />
+					</a>
+				</li>
+				<li class="barHover">
+					<a href="#">手机版
+						<img class="topIcon" src="image/public/s_tel.png">
+					</a>
+				</li>
+			</ul>
+		</header>
+		<div class="content clearfix">
+			<img id="logoS" class="logo fl" src="image/public/logos.png" />
+			<div id="searchBox" class="fl">
+				<div id="search" class="fl">
+					<input type="text" name="goodsText" id="goodsText" value="" /><span class="searchBtn">搜索</span>
+					<ul class="recGoods ">
+						<li>咖啡</li>
+						<li>看法</li>
+						<li>java数据</li>
+					</ul>
+				</div>
+				<div class="fl carBox">购物车</div>
+				<!--购物车列表-->
+				<div id="carList">
+					<div class="carGoods fl">
+						<div class="setScroll fl">
+							<!--商品列表-->
+							<ul class="carListUl fl"></ul>
+							
+						</div>
+
+						<!--购物车底部-->
+						<div class="carPay fl">
+							<p class="feedback"><span class="feedbackBtn">意见反馈</span></p>
+							<div id="carPayBot">
+								<div class="total">合计<span class="totalMoney">￥123</span></div>
+								<div class="pay">立即结算（<span class="totalNum">3</span>）</div>
+							</div>
+						</div>
+
+						<div class="empty fl">
+							<img src="image/public/empty.png" />
+							<p>亲，您的购物车空空如也！</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	<div id="welcome"></div>
+		<script src="js/header.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+
+</html>

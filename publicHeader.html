@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="icon" href="favicon.ico">
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		#publicHeader {
+			width: 100%;
+			height: 90px;
+			border-bottom: 4px solid #CECACE;
+		}
+		
+		#publicArea {
+			width: 1200px;
+			height: 100%;
+			margin: 0 auto;
+		}
+		
+		.logo {
+			margin-top: 11px;
+		}
+		
+		.login {
+			margin: 0 8px;
+			color: dodgerblue;
+			cursor: pointer;
+		}
+		
+		.help {
+			border: 1px solid #CECACE;
+			padding: 5px;
+			cursor: pointer;
+		}
+		
+		.help img {
+			margin: 0 5px;
+		}
+		
+		P {
+			margin-top: 15px;
+		}
+	</style>
+
+	<body>
+		<div id="publicHeader">
+			<div id="publicArea">
+				<img src="image/public/logos.png" class="fl logo" />
+				<div class="fr">
+					<p>您好！欢迎光临1号店<span class="login">请登录</span><span class="help"><img src="image/public/runbun.png"/>帮助中心  <img src="image/public/t_arrow.gif"/> </span></p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var page = $("#hide").val();
+		if(page == 1) {
+			$(".login").html("请注册");
+		} else {
+			$(".login").html("请登录");
+
+		}
+		$(".login").click(function() {
+			if(page == 1) {
+				window.open("reg.html", "_self");
+			} else {
+				window.open("login.html", "_self");
+			}
+		})
+	</script>
+
+</html>

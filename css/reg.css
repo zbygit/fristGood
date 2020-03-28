@@ -1,0 +1,93 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+#box3 {
+	margin: 0px auto;
+	width: 300px;
+	position: relative;
+}
+
+#box4 {
+	width: 300px;
+	height: 40px;
+	background-color: #FF3300;
+	border-radius: 5px;
+}
+
+#yz {
+	width: 100px;
+	height: 40px;
+	background-color: #575660;
+}
+
+li {
+	width: 300px;
+	height: 40px;
+	margin-top: 10px;
+	list-style: none;
+	position: relative;
+}
+
+.wzjz {
+	text-align: center;
+	line-height: 40px;
+}
+
+.in {
+	width: 300px;
+	height: 36px;
+	outline: none;
+	border: 1px solid #CCCCCC;
+	text-indent: 15px;
+	font-size: 14px;
+}
+
+.code {
+	float: left;
+	width: 150px;
+	height: 36px;
+	outline: none;
+	border: 1px solid #CCCCCC;
+	margin: -1px;
+}
+
+#code {
+	float: left;
+	width: 140px;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	margin: 0 5px;
+	background: #CCCCCC;
+	cursor: pointer;
+}
+
+.fuzou {
+	float: left;
+}
+
+.fuyou {
+	float: right;
+}
+
+.zise {
+	font-size: 12px;
+	text-decoration: none;
+	color: black;
+	opacity: 0.9;
+}
+
+.tip {
+	position: absolute;
+	top: 0;
+	left: 110%;
+	height: 38px;
+	line-height: 38px;
+	font-size: 16px;
+	width: 150px;
+}
+#newCode{
+	font-size: 18px;color: #FFFFFF;
+}

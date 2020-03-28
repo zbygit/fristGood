@@ -1,0 +1,456 @@
+.navBar {
+				width: 1200px;
+				height: 38px;
+				margin: 0 auto;
+				margin-top: 30px;
+				line-height: 38px;
+				clear: both;
+				font-size: 18px;
+				border-bottom: 2px solid #FF4E00;
+			}
+			
+			#goodsClass {
+				height: 100%;
+				width: 200px;
+				background: red;
+				line-height: 40px;
+				color: #FFFFFF;
+				text-indent: 30px;
+			}
+			
+			.goodsList {
+				width: 800px;
+			}
+			
+			.goodsList>li {
+				height: 100%;
+				float: left;
+				width: 80px;
+				font-weight: bolder;
+				text-align: center;
+				cursor: pointer;
+			}
+			
+			.navColor {
+				color: #FF3C4E;
+			}
+			
+			.tip {
+				float: right;
+				height: 100%;
+				line-height: 40px;
+				width: 115px;
+			}
+			
+			.tip>img {
+				vertical-align: middle;
+			}
+			
+			.contentArea {
+				width: 1200px;
+				margin: 0 auto;
+				margin-top: 20px;
+				position: relative;
+			}
+			
+			.topArea {
+				width: 100%;
+				font-size: 12px;
+				margin-bottom: 20px;
+			}
+			/*当前所在页面*/
+			
+			.currentPage {
+				margin: 0px;
+			}
+			/*筛选设置*/
+			
+			.filtrate {
+				width: 100%;
+				border: 1PX solid #CCCCCC;
+				margin: -1px;
+			}
+			/*筛选项*/
+			
+			.filterItem {
+				padding: 10px 0;
+			}
+			
+			.filterItem>li {
+				float: left;
+				width: calc(100% - 40px);
+				line-height: 30px;
+				padding: 0 20px;
+				cursor: pointer;
+			}
+			/*底部模块*/
+			
+			.ItemName {
+				width: 80px;
+				height: 100%;
+				line-height: 30px;
+			}
+			
+			.contentList {
+				float: left;
+				width: calc(100% - 80px);
+			}
+			
+			.contentList>li {
+				float: left;
+				padding: 0 10px;
+			}
+			
+			.contentList>li:hover {
+				color: #FF3C3C;
+			}
+			
+			.pin_Active,
+			.price_Active,
+			.color_Active,
+			.class_Active {
+				color: #FF3C3C;
+			}
+			
+			.bottomArea {
+				width: 1200px;
+				min-width: 1200px;
+				margin-top: 50px;
+			}
+			
+			
+			.bottomLeftArea {
+				width: 240px;
+				margin: -1px;
+				border: 1px solid #CCCCCC;
+			}
+			
+			#userHistory {
+				height: 30px;
+				line-height: 30px;
+				font-size: 20px;
+				font-size: 14px;
+				border: 1px solid #CCCCCC;
+				margin: -1px;
+			}
+			
+			#userHistory>i {
+				float: left;
+				display: inline-block;
+				width: 5px;
+				height: 20px;
+				margin-top: 5px;
+				margin-left: 20px;
+				background: red;
+				margin-right: 5px;
+			}
+			
+			#title {
+				color: #ff4e00;
+			}
+			
+			#clear {
+				float: right;
+				margin-right: 20px;
+				cursor: pointer;
+			}
+			
+			#likeList {
+				width: 100%;
+				margin-top: 10px;
+			}
+			
+			#likeList>li {
+				margin-bottom: 10px;
+				border-bottom: 1px solid #CCCCCC;
+				position: relative;
+			}
+			
+			#likeList>li>.likeGood {
+				width: 100%;
+			}
+			
+			#likeList>li>.likeGood img {
+				width: 200px;
+				height: 200px;
+				margin-left: 20px;
+			}
+			
+			#likeList>li:last-of-type {
+				border: none;
+			}
+			
+			.likeName:hover {
+				color: #FF4F39;
+			}
+			
+			.likePrice {
+				padding: 0 10px;
+				line-height: 30px;
+				color: #B00504;
+				font-size: 18px;
+				text-align: center;
+			}
+			
+			.nameAll {
+				width: 194px;
+				height: 40px;
+				background: rgba(0, 0, 0, .6);
+				position: absolute;
+				bottom: 30px;
+				left: 20px;
+				color: #FFFFFF;
+				padding: 3px;
+				overflow: hidden;
+				line-height: 20px;
+				display: none;
+			}
+			
+			.bottomRightArea {
+				width: 950px;
+				height: 1000px;
+				min-width: 950px;
+				margin-left: 8px;
+				/*border: 1px solid #CCCCCC;*/
+				margin-bottom: 30px;
+			}
+			
+			#setPage {
+				width: 100%;
+				height: 30px;
+			}
+			
+			.setPageLeft>li {
+				float: left;
+				height: 30px;
+				width: 50px;
+				border: 1px solid #CCCCCC;
+				margin: -1px -1px -1px 0px;
+				text-align: center;
+				line-height: 30px;
+				cursor: pointer;
+				position: relative;
+			}
+			
+			.setPageLeft>li:hover {
+				background: #FF3C3C;
+				color: #FFFFFF;
+			}
+			
+			.setPageright {
+				float: right;
+			}
+			
+			.setpage_Active {
+				background: #FF3C3C;
+				color: #FFFFFF;
+			}
+			
+			.pageNameDo {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				text-align: center;
+				padding-right: 10px;
+				box-sizing: border-box;
+			}
+			
+			.up {
+				position: absolute;
+				left: 35px;
+				top: 8px;
+				width: 0;
+				height: 0;
+				border-width: 3px;
+				border-style: solid;
+				border-color: transparent transparent #888888;
+			}
+			
+			.down {
+				position: absolute;
+				left: 35px;
+				top: 18px;
+				width: 0;
+				height: 0;
+				border-width: 3px;
+				border-style: solid;
+				border-color: #888888 transparent transparent;
+			}
+			
+			#goodsListArea {
+				width: 100%;
+				border-top: 1px solid #CCCCCC;
+			}
+			
+			.goodsListUl {
+				width: 100%;
+				margin-top: 10px;
+			}
+			
+			.goodsListUl>li {
+				float: left;
+				width: 25%;
+				text-align: center;
+			}
+			
+			.goodsListUl>li:hover {
+				border: 1px solid #CCCCCC;
+				margin: -1px;
+			}
+			
+			.goodsListUl>li>img {
+				margin-top: 5px;
+				width: 200px;
+				height: 200px;
+			}
+			
+			.price {
+				font-size: 18px;
+				color: #FF4040;
+				line-height: 30px;
+			}
+		
+			.listItemName {
+				font-size: 14px;
+				padding: 0 5px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				line-height: 30px;
+				cursor: pointer;
+			}
+			
+			.do {
+				width: 100%;
+				text-align: start;
+				margin-bottom: 5px;
+			}
+			
+			.collection {
+				float: left;
+				width: 30%;
+				height: 30px;
+				line-height: 27px;
+				color: #CCCCCC;
+				background: url(../image/public/sc_n.png)no-repeat 10px center;
+				border: 1px solid #CCCCCC;
+				padding-left: 36px;
+				box-sizing: border-box;
+				margin: 0 -1px 0 5%;
+				cursor: pointer;
+			}
+			
+			.true {
+				color: #FF4040;
+				background: url(../image/public/sc_y.png)no-repeat 10px center;
+			}
+			
+			.addCar {
+				float: left;
+				width: 60%;
+				height: 30px;
+				line-height: 27px;
+				background: url(../image/public/cars.png)no-repeat 30px center;
+				border: 1px solid #CCCCCC;
+				padding-left: 56px;
+				box-sizing: border-box;
+				margin: 0 -1px 0 0;
+				cursor: pointer;
+				color: #ff4e00;
+			}
+			
+			.addCar:hover {
+				color: #FFFFFF;
+				background: #ff4e00 url(../image/public/cars_h.png)no-repeat 30px center;
+				border: 1px solid #ff4e00;
+			}
+			
+			.pages {
+				float: right;
+				color: #888888;
+				font-size: 16px;
+				margin-top: 20px;
+				margin-right: 30px;
+			}
+			
+			.pages>li {
+				float: left;
+				border: 1px solid #CECACE;
+				min-width: 30px;
+				margin-right: 3px;
+				padding: 10px;
+				text-align: center;
+				cursor: pointer;
+				border-radius: 5px;
+			}
+			
+			.pages>li:hover {
+				background: #FF4F39;
+				color: #FFFFFF;
+			}
+			
+			.pages>li.pageCurrent {
+				background: #FF4F39;
+				color: #FFFFFF;
+			}
+			
+			.pages>li.pre:hover,
+			.pages>li.next:hover {
+				background: #999999;
+			}
+			/*筛选条件*/
+			
+			.filterInfo {
+				position: relative;
+				width: 100%;
+				margin-top: 10px;
+			}
+			
+			#setInfo {
+				display: none;
+				width: 100%;
+				height: 30px;
+				background: #F6F8FD;
+				border: 1px solid #EAEAEA;
+				position: absolute;
+				left: 0;
+				top: 0px;
+				margin: -1px;
+				line-height: 30px;
+			}
+			
+			#chooseTitle {
+				margin-left: 20px;
+			}
+			
+			.setList {
+				height: 16px;
+				margin: 6px;
+			}
+			
+			.setList>li {
+				float: left;
+				height: 16px;
+				line-height: 16px;
+				margin-right: 8px;
+			}
+			
+			.whatSet,
+			.setValue {
+				float: left;
+				margin: 0 4px;
+			}
+			
+			.setDel {
+				float: right;
+				width: 16px;
+				height: 16px;
+				background: #FF4F39;
+				color: #FFF;
+				text-align: center;
+				cursor: pointer;
+			}
+			
+			.setValue {
+				color: #FF6600;
+			}

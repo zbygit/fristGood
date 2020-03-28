@@ -1,0 +1,114 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+#box{
+    width: 1200px;
+    height: 550px;
+    margin: 0px auto;
+    position: relative;
+}
+#zhuce{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    right: 0px;
+    top: 60px;
+}
+
+
+#tup{
+    position: absolute;
+    left:0px ;
+}
+#dh{
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    margin-left: -170px;
+}
+li{
+    list-style: none;
+}
+.bt{
+    width: 400px;
+    height: 40px;
+    line-height: 40px;
+}
+
+
+.fudongzou{
+    float: left;
+}
+.fudongyou{
+    float: right;
+}
+.sr{
+    width: 400px;
+    height: 40px;
+    margin-top: 10px;
+    border: 1px brown solid;
+}
+.inp{
+    width: 350px;
+    height: 38px;
+    border: none;
+    margin-top: 1px;
+    margin-right: 1px;
+    font-size:18px ;
+    outline: none;
+}
+.touming{
+    opacity: 0.7;
+}
+img{
+    line-height: 40px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.a{
+    text-decoration: none ;
+    font-size: 13px;
+}
+.sp{
+    width: 400px;
+    height: 20px;
+    font-size: 12px;
+    margin-top: 10px;
+    line-height: 20px;
+}
+#dengru{
+    background: #FF4F39;
+    width: 400px;
+    height: 45px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 45px;
+    color: #dedede;
+}
+
+.zise{
+    font-size: 12px;
+    text-decoration: none ;
+    color: black;
+}
+.dsf{
+    margin-top: 20px;
+    height: 26px;
+    line-height: 26px;
+}
+.tub{
+    margin-top: 12px;
+    margin-right:3px ;
+}
+/*自动登录*/
+#autoLogin{
+	display: inline-block;
+	height: 18px;
+	margin: 1px;
+	vertical-align: middle;
+}
